@@ -1,0 +1,477 @@
+/* =========================
+   General settings
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0d12;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+button,
+select {
+    font: inherit;
+}
+
+button,
+a,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+    outline: 2px solid #8a83ff;
+    outline-offset: 4px;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 22px 8%;
+    border-bottom: 1px solid #20232c;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #a8aab3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.language {
+    border: 1px solid #343743;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #141720;
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 48px;
+    transition: 0.3s;
+}
+
+.language:hover {
+    background: #252936;
+}
+
+/* =========================
+   Hero section
+========================= */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero>p:first-child {
+    color: #8b83ff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero>p:nth-of-type(2) {
+    max-width: 550px;
+    color: #a8aab3;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   Hero buttons
+========================= */
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.actions a {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.actions a:first-child {
+    background: #7168ee;
+    color: white;
+}
+
+.actions a:first-child:hover {
+    background: #8a83ff;
+}
+
+.actions a:last-child {
+    border: 1px solid #343743;
+    color: white;
+}
+
+.actions a:last-child:hover {
+    background: #20232c;
+}
+
+/* =========================
+   Features
+========================= */
+
+#features {
+    padding: 90px 8%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#features h2 {
+    grid-column: 1 / -1;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#features>div {
+    padding: 30px 25px;
+    background: #141720;
+    border: 1px solid #252936;
+    border-radius: 14px;
+    text-align: left;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#features>div:hover {
+    transform: translateY(-5px);
+    border-color: #7168ee;
+}
+
+#features h3 {
+    margin-bottom: 12px;
+}
+
+#features p {
+    color: #a8aab3;
+}
+
+/* =========================
+   About
+========================= */
+
+#about {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 550px;
+    margin: auto;
+    color: #a8aab3;
+}
+
+/* =========================
+   Anonymous Identity
+========================= */
+
+#start {
+    padding: 90px 20px;
+    text-align: center;
+    background: #10131c;
+}
+
+#start h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#start>p {
+    color: #a8aab3;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+#start label {
+    display: block;
+    color: #a8aab3;
+    margin-top: 25px;
+}
+
+#countrySelect {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    margin: 15px auto 25px;
+    padding: 13px;
+    background: #1a1e2a;
+    color: white;
+    border: 1px solid #343743;
+    border-radius: 9px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#generateIdentity {
+    background: #7168ee;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#generateIdentity:hover {
+    background: #8a83ff;
+}
+
+#identityResult {
+    width: 100%;
+    max-width: 350px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: #1a1e2a;
+    border: 1px solid #343743;
+    border-radius: 14px;
+    color: #a8aab3;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #20232c;
+    color: #777b88;
+    font-size: 13px;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    #features {
+        padding: 75px 5%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #features>div:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 650px) {
+    header {
+        padding: 18px 5%;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 70px 22px;
+    }
+
+    .hero>p:first-child {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 54px);
+    }
+
+    .hero>p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+    .actions {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .actions a {
+        padding: 13px 19px;
+        font-size: 14px;
+    }
+
+    #features {
+        padding: 65px 20px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #features h2 {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+
+    #features>div,
+    #features>div:last-child {
+        grid-column: auto;
+        padding: 25px 20px;
+    }
+
+    #about {
+        padding: 65px 22px;
+    }
+
+    #about h2,
+    #start h2 {
+        font-size: 27px;
+    }
+
+    #start {
+        padding: 65px 20px;
+    }
+
+    #start>p {
+        font-size: 14px;
+    }
+
+    #countrySelect {
+        width: 100%;
+        max-width: 320px;
+        min-height: 48px;
+    }
+
+    #generateIdentity {
+        width: 100%;
+        max-width: 320px;
+        min-height: 48px;
+    }
+
+    #identityResult {
+        padding: 20px;
+    }
+}
+
+/* =========================
+   Small phones
+========================= */
+
+@media (max-width: 360px) {
+    nav {
+        gap: 10px 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions a {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+/* =========================
+   RTL support
+========================= */
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] #features>div {
+    text-align: right;
+}
+
+html[dir="rtl"] .hero {
+    direction: rtl;
+}
+
+html[dir="rtl"] .actions {
+    direction: rtl;
+}
